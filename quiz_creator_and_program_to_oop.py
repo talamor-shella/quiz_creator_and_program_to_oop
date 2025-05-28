@@ -13,7 +13,7 @@ class Question:
 
     #  displays the questions and choices
     def display(self):
-        print(f"\nQuestionL: {self.text}")
+        print(self.text)
         for key,value in self.choices.items():
             print(f"{key}) {value}")
 
@@ -133,6 +133,28 @@ class QuizTaker(QuizManager):
         print(f"\nQuiz Completed! Out of {total} questions:")  
         print(f"Correct answers: {self.correct_count}")  
         print(f"Wrong answers: {self.incorrect_count}")  
-
-                
+      
 # define main function
+def main():
+    while True: 
+        print("\n--- Quiz Program ---") 
+        print("1. Create a Quiz")  
+        print("2. Take a Quiz")  
+        print("3. Exit")  
+
+        choice = input("Choose an option (1/2/3): ")  
+
+        if choice == "1":  
+            creator = QuizCreator()  
+            creator.creating_quiz_questions()  
+        elif choice == "2": 
+            taker = QuizTaker()  
+            taker.start_quiz_taker()  
+        elif choice == "3":  
+            print("Goodbye!")  
+            break  
+        else:
+            print("Invalid choice. Please try again.")  
+
+# Run the main function to start the program
+main()
