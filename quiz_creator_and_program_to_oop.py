@@ -16,6 +16,16 @@ class Question:
         print(f"\nQuestionL: {self.text}")
         for key,value in self.choices.items():
             print(f"{key}) {value}")
+
+    # Format the question and choices into a string suitable for saving to a file
+    def format_for_file(self):
+        content = f"\nQuestion: {self.text}\n"
+        for key, value in self.choices.items():
+            content += f"{key}) {value}\n"
+        content += f"The correct answer is: {self.correct_answer}\n"
+        return content
+    
 # define class quiz manager
+
 # define class quiz taker that inherits from quiz manager
 # define main function
