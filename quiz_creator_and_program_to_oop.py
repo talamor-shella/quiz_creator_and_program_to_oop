@@ -128,6 +128,11 @@ class QuizTaker(QuizManager):
             cont = input("Do you want to continue? (yes/no): ").lower()  
             if cont != "yes": 
                 break
+        
+        total = self.correct_count + self.incorrect_count 
+        print(f"\nQuiz Completed! Out of {total} questions:")  
+        print(f"Correct answers: {self.correct_count}")  
+        print(f"Wrong answers: {self.incorrect_count}")  
 
-    
+                
 # define main function
