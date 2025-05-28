@@ -11,6 +11,11 @@ class Question:
         self.choices = choices
         self.correct_answer = correct_answer
 
+    #  displays the questions and choices
+    def display(self):
+        print(f"\nQuestionL: {self.text}")
+        for key,value in self.choices.items():
+            print(f"{key}) {value}")
 # define class quiz manager
 # define class quiz taker that inherits from quiz manager
 # define main function
