@@ -32,6 +32,11 @@ class Question:
         return user_answer == self.correct_answer
 
 # define class quiz manager
-
+class QuizManager: 
+    # constructor to initialize category
+    def __init__(self, category):
+        self.category = category.lower()
+        self.filename = self.category + ".txt"
+        self.questioms = []
 # define class quiz taker that inherits from quiz manager
 # define main function
