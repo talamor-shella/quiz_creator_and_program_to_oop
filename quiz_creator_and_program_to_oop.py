@@ -37,7 +37,7 @@ class QuizManager:
     def __init__(self, category):
         self.category = category.lower()
         self.filename = self.category + ".txt"
-        self.questioms = []
+        self.questions = []
         
     # load questions from a file for the selected category
     def load_questions_from_file(self):
@@ -58,7 +58,15 @@ class QuizManager:
                 except IndexError:
                     continue 
         except FileNotFoundError:
-
-
+            print("No quiz found in this category")
+            return False
+        return True
+    
+# define quiz creator class that inherits from quiz manager
+class QuizCreator: 
+    # constructor asks the user to choose a category
+    def __init__(self):
+        category = input("Enter a category for the quiz (Math, English, Science, Hisitory): ").lower()
+        super().__init__(category) #initialize parent class with that category 
 # define class quiz taker that inherits from quiz manager
 # define main function
