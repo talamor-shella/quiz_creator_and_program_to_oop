@@ -99,4 +99,12 @@ class QuizCreator(QuizManager):
                 break  
 
 # define class quiz taker that inherits from quiz manager
+class QuizTaker(QuizManager):
+    # constructor asks for category and sets counters
+    def __init__(self):
+        category = input("Enter a quiz category (Math, English, Science, History): ")
+        super().__init__(category)
+        self.correct_count = 0
+        self.incorrect_count = 0
+        
 # define main function
