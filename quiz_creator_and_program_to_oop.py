@@ -25,6 +25,12 @@ class Question:
         content += f"The correct answer is: {self.correct_answer}\n"
         return content
     
+    # ask the user the question and check if their answer is correct
+    def ask_user(self):
+        self.display()
+        user_answer = input("Enter your answer (a/b/c/d): ").lower()
+        return user_answer == self.correct_answer
+
 # define class quiz manager
 
 # define class quiz taker that inherits from quiz manager
