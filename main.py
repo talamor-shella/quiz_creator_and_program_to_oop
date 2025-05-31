@@ -1,4 +1,4 @@
-from quiz_creator import QuizCreator
+from quiz_app.quiz_creator import QuizCreator
 from quiz_taker import QuizTaker
 
 def main():
