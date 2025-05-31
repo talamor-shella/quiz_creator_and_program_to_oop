@@ -1,5 +1,5 @@
 import random 
-from quiz_manager import QuizManager
+from quiz_app.quiz_manager import QuizManager
 
 class QuizTaker(QuizManager):
     # constructor asks for category and sets counters

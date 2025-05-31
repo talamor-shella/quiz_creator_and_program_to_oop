@@ -1,4 +1,4 @@
-from quiz_manager import QuizManager
+from quiz_app.quiz_manager import QuizManager
 from question import Question
 
 # define quiz creator class that inherits from quiz manager
